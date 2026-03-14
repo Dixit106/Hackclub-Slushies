@@ -10,3 +10,74 @@
 html{
     scroll-behavior: smooth;
 }
+
+/*Animated Background*/
+body{
+    background: linear-gradient(-45deg,#0f172a, #310e68, #0e1b68, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG{
+    0% {background-position: 0% 50%; }
+    50% {background-position: 100% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/*Glass thing*/
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 8rem 10%
+}
