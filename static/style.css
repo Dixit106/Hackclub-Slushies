@@ -79,5 +79,129 @@ nav {
 /* Sections */
 section {
     min-height: 100vh;
-    padding: 8rem 10%
+    padding: 8rem 10% 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+/* Hero / Home */
+#home {
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Low Flicker Animation*/
+@keyframes lowVoltage {
+     0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+            20%, 24%, 55% { opacity: 0.3; }
+}
+
+.hero-title {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* About Section */
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.about-visual {
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Floating shapes behind the images*/
+.shape {
+    position: absolute;
+    filter: blur(40px);
+    border-radius: 50%;
+    animation: float 6s infinite alternate;
+}
+
+.shape-1 { width: 200px; height: 200px; background: #8b5cf6; top: 10%; left: 10%; }
+.shape-2 { width: 150px; height: 150px; background: #ec4899; bottom: 10%; right: 10%; animation-delay: -3s; }
+
+@keyframes float {
+    0% {transform: translateY(0) scale(1); }
+    100% {transform: translateY(-30px) scale(1.1); }
+}
+
+/* 4 Image Grid thing */
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    z-index: 2;
+    transform: rotate(-3deg);
+    transition: transform 0.4s;
+}
+
+.photo-grid:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.small-photo {
+    width: 130px;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.small-photo:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* Stagger the photos slightly for a creative look */
+.img-1 { transform: translateY(15px); }
+.img-4 {transform: translateY(-15px); }
