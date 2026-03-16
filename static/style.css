@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Space Gretesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 html{
@@ -216,7 +216,7 @@ section {
 .img-4 {transform: translateY(-15px); }
 
 /* Project Section*/
-.projects-grid {
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fir, minmax(320px, 1fr));
     gap: 2.5rem;
